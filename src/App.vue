@@ -7,11 +7,22 @@
     <ul class="todo-list">
       <li v-for="todo of todos" class="todo">{{ todo }}</li>
     </ul>
+    <br />
+    <footer>
+      <ToggleTheme />
+    </footer>
   </section>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
+import ToggleTheme from './views/ToggleTheme.vue'
+
+onMounted(() => {
+  let style = document.styleSheets
+  console.log(style)
+})
+
 let todos = ref([1, 2, 3]);
 </script>
 
