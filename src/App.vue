@@ -15,17 +15,12 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref } from 'vue';
 import ToggleTheme from './views/ToggleTheme.vue'
-
-onMounted(() => {
-  let style = document.styleSheets
-  console.log(style)
-})
 
 let todos = ref([1, 2, 3]);
 </script>
 
 <style>
-@import url('https://unpkg.com/todomvc-app-css@2.4.2/index.css');
+/* @import url('https://unpkg.com/todomvc-app-css@2.4.2/index.css'); */
 </style>
