@@ -15,6 +15,7 @@
 </template>
 
 <script setup>
+import '../node_modules/todomvc-app-css/index.css'
 import { ref } from 'vue';
 import ToggleTheme from './views/ToggleTheme.vue'
 
