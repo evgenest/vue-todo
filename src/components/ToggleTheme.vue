@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
+import { onMounted } from 'vue'
 
 const useDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)')
 useDark.addEventListener('change', (e) => setupTheme(e))
@@ -20,10 +20,8 @@ onMounted(() => {
 function setupTheme(matchMedia) {
   rootClass.remove('light')
   rootClass.remove('dark')
-  if (matchMedia.matches)
-    rootClass.add('dark')
-  else
-    rootClass.add('light')
+  if (matchMedia.matches) rootClass.add('dark')
+  else rootClass.add('light')
 
   addTransition()
 }
@@ -31,6 +29,9 @@ function setupTheme(matchMedia) {
 function addTransition() {
   let body = document.body
   let transition = getComputedStyle(body).getPropertyValue('transition')
+
+  // user setup of transition property is disabled for the first page load
+  // and now it will be enabled for next theme switches
   if (transition.includes('all 0s'))
     body.style.setProperty('transition', 'color 0.5s, background-color 0.5s')
 }
