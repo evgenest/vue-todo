@@ -2,20 +2,18 @@
   "name": "vue-todo",
   "version": "0.0.0",
   "private": true,
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
-  },
   "scripts": {
-    "dev": "vite",
-    "build": "rimraf ./dist && vite build",
+    "dev": "npm run fl && vite",
+    "build": "npm run fl && rimraf ./dist && vite build",
     "preview": "npm run build && vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "fl": "npm run format && npm run lint",
+    "prepare": "husky install"
   },
   "dependencies": {
     "lodash": "^4.17.21",
+    "pinia": "^2.1.4",
     "todomvc-app-css": "^2.4.2",
     "vue": "^3.3.4",
     "vue-router": "^4.2.2"
