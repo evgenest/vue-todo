@@ -1,6 +1,10 @@
 # vue-todo
 
-This template should help get you started developing with Vue 3 in Vite.
+This app is a clone of [Vue.js • TodoMVC](https://todomvc.com/examples/vue/) with minor improvements:
+
+* Using [Composition API](https://vuejs.org/guide/extras/composition-api-faq.html)
+
+* Using [Pinia](https://pinia.vuejs.org/)
 
 ## Recommended IDE Setup
 
