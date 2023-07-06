@@ -33,3 +33,7 @@ npm run build
 ```sh
 npm run lint
 ```
+
+## Todos
+
+* Check if the "npm run prepare" script needs to be run after the first "git pull". Update the README appropriately
