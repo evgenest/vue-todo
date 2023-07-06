@@ -3,12 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "npm run fl && vite",
-    "build": "npm run fl && rimraf ./dist && vite build",
+    "dev": "vite",
+    "build": "rimraf ./dist && vite build",
     "preview": "npm run build && vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "fl": "npm run format && npm run lint",
     "prepare": "husky install"
   },
   "dependencies": {
