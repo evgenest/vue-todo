@@ -5,7 +5,7 @@
     autocomplete="off"
     placeholder="What needs to be done?"
     @keyup.enter="addTodo"
-    v-model="newTodo"
+    v-model.trim="newTodo"
   />
 </template>
 
@@ -17,9 +17,8 @@ const newTodo = ref('')
 const todosStore = useTodosStore()
 
 function addTodo() {
-  const title = newTodo.value.trim()
+  if (!newTodo.value) return
+  todosStore.addTodo(newTodo.value)
   newTodo.value = ''
-  if (!title) return
-  todosStore.addTodo(title)
 }
 </script>
