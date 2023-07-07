@@ -1,6 +1,6 @@
 // import css styles
 // import './assets/main.css'
-import '@node_modules/todomvc-app-css/index.css'
+import '@todomvc-app-css/index.css'
 
 // create the vue app
 import { createApp } from 'vue'

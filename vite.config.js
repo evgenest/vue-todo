@@ -11,7 +11,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
-      '@node_modules': fileURLToPath(new URL('./node_modules', import.meta.url))
+      '@todomvc-app-css': fileURLToPath(new URL('./node_modules/todomvc-app-css', import.meta.url))
     }
   }
 })
