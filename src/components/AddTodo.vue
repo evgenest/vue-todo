@@ -1,15 +1,12 @@
 <template>
-  <header class="header">
-    <h1>todos</h1>
-    <input
-      class="new-todo"
-      autofocus="autofocus"
-      autocomplete="off"
-      placeholder="What needs to be done?"
-      @keyup.enter="addTodo"
-      v-model="newTodo"
-    />
-  </header>
+  <input
+    class="new-todo"
+    autofocus="autofocus"
+    autocomplete="off"
+    placeholder="What needs to be done?"
+    @keyup.enter="addTodo"
+    v-model="newTodo"
+  />
 </template>
 
 <script setup>
