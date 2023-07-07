@@ -14,12 +14,12 @@ import { ref } from 'vue'
 import { useTodosStore } from '@/stores/todos'
 
 const newTodo = ref('')
-const todos = useTodosStore()
+const todosStore = useTodosStore()
 
 function addTodo() {
   const title = newTodo.value.trim()
   newTodo.value = ''
   if (!title) return
-  todos.addTodo(title)
+  todosStore.addTodo(title)
 }
 </script>

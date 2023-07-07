@@ -12,6 +12,10 @@ import router from './router'
 const app = createApp(App)
 const pinia = createPinia()
 
+app.directive('focus', (el, binding) => {
+  if (binding.value) el.focus()
+})
+
 app.use(router)
 app.use(pinia)
 
