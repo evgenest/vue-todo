@@ -1,12 +1,15 @@
 import { defineStore, acceptHMRUpdate } from 'pinia'
-import { computed, ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { filter } from 'lodash'
 import { useTodosStore } from '@/stores/todos'
+import { useRoute } from 'vue-router'
 
 export const useFilteredTodosStore = defineStore('filteredTodos', () => {
   const todosStore = useTodosStore()
   const todos = computed(() => todosStore.todos)
   const visibility = ref('all')
+  const route = useRoute()
+  watch(route, (newValue) => (visibility.value = newValue.hash.slice(1) || 'all'))
 
   const filters = {
     all() {

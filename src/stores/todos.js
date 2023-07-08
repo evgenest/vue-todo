@@ -1,9 +1,10 @@
 import { defineStore, acceptHMRUpdate } from 'pinia'
-import { ref, watch } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { filter, each } from 'lodash'
 import { map } from 'lodash'
 
 import { todoStorage } from '@/stores/todoStorage'
+import { useFilteredTodosStore } from '@/stores/filteredTodos'
 
 export const useTodosStore = defineStore('todos', () => {
   const todos = ref(todoStorage.get())
@@ -34,8 +35,10 @@ export const useTodosStore = defineStore('todos', () => {
     })
   }
 
+  const filteredTodosStore = useFilteredTodosStore()
+  const filters = computed(() => filteredTodosStore.filters)
   function clearCompleted() {
-    todos.value = filter(todos.value, (t) => !t.completed)
+    todos.value = filters.value.active()
   }
 
   return {
