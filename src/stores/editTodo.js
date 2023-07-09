@@ -1,4 +1,4 @@
-import { clone } from 'lodash'
+import { clone } from 'lodash-es'
 import { defineStore, acceptHMRUpdate } from 'pinia'
 import { ref } from 'vue'
 import { useTodosStore } from '@/stores/todos'

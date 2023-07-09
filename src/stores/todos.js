@@ -1,7 +1,7 @@
 import { defineStore, acceptHMRUpdate } from 'pinia'
 import { computed, ref, watch } from 'vue'
-import { filter, each } from 'lodash'
-import { map } from 'lodash'
+import { filter, each } from 'lodash-es'
+import { map } from 'lodash-es'
 
 import { todoStorage } from '@/stores/todoStorage'
 import { useFilteredTodosStore } from '@/stores/filteredTodos'

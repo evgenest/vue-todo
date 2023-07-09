@@ -1,6 +1,6 @@
 import { defineStore, acceptHMRUpdate } from 'pinia'
 import { computed, ref, watch } from 'vue'
-import { filter, includes } from 'lodash'
+import { filter, includes } from 'lodash-es'
 import { useTodosStore } from '@/stores/todos'
 import { useRoute } from 'vue-router'
 import { routes } from '@/router'

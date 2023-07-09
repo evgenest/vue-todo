@@ -1,11 +1,7 @@
-import { map } from 'lodash'
+import { map } from 'lodash-es'
 import { createRouter, createWebHistory } from 'vue-router'
 
-export const routes = [
-  'all',
-  'active',
-  'completed'
-]
+export const routes = ['all', 'active', 'completed']
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -16,7 +12,7 @@ const router = createRouter({
       component: () => import('@/App.vue'),
       // children: [{ path: '/#all' }, { path: '/#active' }, { path: '/#completed' }]
       children: map(routes, (route) => {
-        return {path: `/#${route}`}
+        return { path: `/#${route}` }
       })
     }
   ]
