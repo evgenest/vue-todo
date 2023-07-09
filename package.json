@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
     "pinia": "^2.1.4",
     "todomvc-app-css": "^2.4.2",
     "vue": "^3.3.4",
